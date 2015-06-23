@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "可维护的gulpfile"
+title:  "可维护的「gulpfile」"
 date:   2015-06-23 17:50:00
 categories: gulp
 ---
 # 可维护的`gulpfile`
-随着项目的推进，往往会不断有新的任务需要自动化处理，`fulpfile`会不断“膨胀”，如果只是单个`gulpfile`，可读性和可维护性都会变得较差。对`gulpfile`进行合理的拆分和组织，就可以增强`gulpfile`的可读性、可维护性和可扩展性。
+随着项目的推进，往往会不断有新的任务需要自动化处理，`gulpfile`会不断“膨胀”，如果所有内容都添加到单个`gulpfile`文件中，可读性和可维护性都会变得很差。对`gulpfile`进行合理的拆分和组织，就可以增强`gulpfile`的可读性、可维护性和可扩展性。
 
 # 需要改写的`gulpfile`
 以下面的`gulpfile`为例，对其进行拆分。因为只是为了示例，所有只定义了一个`gulp`任务。
 
-```javascript
+{% highlight javascript %}
 'use strict';
 
 var gulp = require('gulp'),
@@ -27,7 +27,7 @@ gulp.task('lint', function() {
 gulp.task('watch:js', ['lint'], function() {
   gulp.watch(jsSource, ['lint']);
 });
-```
+{% endhighlight %}
 
 以上就是用于改写的`gulpfile`，下面对其进行改写，首先看一下改写后的目录结构。
 
@@ -54,13 +54,13 @@ gulp.task('watch:js', ['lint'], function() {
 
 ##  安装插件
 
-```shell
-npm i -D gulp-load-plugins
-```
+{% highlight bash %}
+$ npm i -D gulp-load-plugins
+{% endhighlight %}
 
 ## 通过`gulp-load-plugins`加载gulp相关插件
 下面是使用`gulp-load-plugins`加载gulp相关插件后`gulpfile`
-```javascirpt
+{% highlight javascript %}
 'use strict';
 
 var gulp = require('gulp'),
@@ -76,24 +76,24 @@ gulp.task('lint', function() {
 
 gulp.task('watch:js', ['lint'], function() {
   gulp.watch(jsSource, ['lint']);
-});
-```
+  });
+{% endhighlight %}
 
 # 第二步：使用外部配置文件
 使用外部配置文件，可以方便地对配置进行管理、修改和重用。所有与gulp相关的配置都添加到`config.json`文件中。
 
 config.json文件
-```javascript
+{% highlight javascript %}
 {
   "tasksPath": "gulp-tasks/",
   "source": {
     "js": "app/js/*.js"
   }
 }
-```
+{% endhighlight %}
 
 gulpfile.js文件
-```javascript
+{% highlight javascript %}
 'use strict';
 
 var gulp = require('gulp'),
@@ -110,13 +110,13 @@ gulp.task('lint', function() {
 gulp.task('watch:js', ['lint'], function() {
   gulp.watch(cfg.source.js, ['lint']);
 });
-```
+{% endhighlight %}
 
 # 第三步：把基本任务定义为一个模块
 因为`gulpfile`本身就可以看作一个(?)node文件(?)，所以完全可以使用`CommonJS`模块系统把基本任务拆分成小的模块，不但易于阅读和维护，而且还便于重用。
 
 拆分后的`lint`任务：
-```javascript
+{% highlight javascript %}
 // gulp-tasks/lint.js
 'use strict';
 
@@ -130,14 +130,14 @@ module.exports = function(gulp, $, cfg) {
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'));
 };
-```
+{% endhighlight %}
 
 # 第四步：在`gulpfile`中获取任务模块并且使用
 因为对`CommonJS`模块系统的支持，只需要在`gulpfile`中使用`require`就可以加载并且使用相关任务模块。
 
 但是因为加载每一个任务模块都是类似的，所有有必要把加载任务模块的操作抽象为一个函数。
 
-```javascript
+{% highlight javascript %}
 'use strict';
 
 var gulp = require('gulp'),
@@ -155,4 +155,4 @@ gulp.task('lint', getTask('lint'));
 gulp.task('watch:js', ['lint'], function() {
   gulp.watch(jsSource, ['lint']);
 });
-```
+{% endhighlight %}
