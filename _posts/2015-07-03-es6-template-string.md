@@ -2,6 +2,7 @@
 layout: post
 title:  "「ES6」模板字符串"
 date:   2015-07-03 11:50:00
+comments: true
 categories: javascript es6
 ---
 `ES6`中提供了一种新的定义字符串字面值的方法--模板字符串。

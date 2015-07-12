@@ -2,6 +2,7 @@
 layout: post
 title:  "快速运行一个静态服务器"
 date:   2015-06-30 11:50:00
+comments: true
 categories: node
 ---
 # 快速运行一个静态服务器

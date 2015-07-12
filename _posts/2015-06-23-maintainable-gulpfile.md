@@ -2,6 +2,7 @@
 layout: post
 title:  "可维护的「gulpfile」"
 date:   2015-06-23 17:50:00
+comments: true
 categories: gulp
 ---
 # 可维护的`gulpfile`

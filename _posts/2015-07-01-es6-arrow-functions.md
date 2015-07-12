@@ -2,6 +2,7 @@
 layout: post
 title:  "「ES6」箭头函数（Arrow Functions）"
 date:   2015-07-01 16:12:00
+comments: true
 categories: javascript es6
 ---
 

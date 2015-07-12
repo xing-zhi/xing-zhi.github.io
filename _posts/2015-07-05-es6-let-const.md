@@ -2,6 +2,7 @@
 layout: post
 title:  "「let」和「const」"
 date:   2015-07-05 12:26:00
+comments: true
 categories: javascript es6
 ---
 
