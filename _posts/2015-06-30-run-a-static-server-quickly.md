@@ -5,7 +5,7 @@ date:   2015-06-30 11:50:00
 comments: true
 categories: node
 ---
-# 快速运行一个静态服务器
+
 在前端开发中，搭建一个简单的服务器，通过HTTP协议访问我们的内容比直接在浏览器中打开HTML文件要方便、实用的多。
 
 有时一个HTTP服务器也是必须的，比如在进行`Ajax`相关开发和测试时，本地文件协议`file://`和HTTP协议`http://`之间存在跨域问题。
@@ -19,7 +19,7 @@ categories: node
 
 首先安装`express`
 {% highlight bash %}
-$ npm i -s express
+$ npm i -S express
 {% endhighlight %}
 
 然后是创建服务器server.js文件
@@ -38,7 +38,7 @@ var express = require('express'),
   });
 {% endhighlight %}
 
-最后，在和server.js出于相同目录下的public文件夹下添加相关文件，运行服务器
+最后，在和server.js处于相同目录下的public文件夹下添加相关文件，运行服务器
 {% highlight bash %}
 $ node server.js
 {% endhighlight %}
@@ -51,4 +51,4 @@ $ node server.js
 $ python -m SimpleHTTPServer 3000
 {% endhighlight %}
 
-注：Mac上预装了`Python`；而`*nix`只要不是刚重装系统，一般也已经安装上`Python`了，即使没安装，安装也很方便；至于Windows，不是很清楚，不过使用`wamp`或许是一个不错的选择。
+注：Mac上预装了`Python`；而`*nix`只要不是刚重装系统，一般也已经安装上`Python`了，即使没安装，安装也很方便；至于Windows，不是很清楚，不过使用[wamp](http://www.wampserver.com/en/)或许是一个不错的选择。

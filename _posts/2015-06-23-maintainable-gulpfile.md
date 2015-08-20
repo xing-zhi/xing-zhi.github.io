@@ -5,7 +5,7 @@ date:   2015-06-23 17:50:00
 comments: true
 categories: gulp
 ---
-# 可维护的`gulpfile`
+
 随着项目的推进，往往会不断有新的任务需要自动化处理，`gulpfile`会不断“膨胀”，如果所有内容都添加到单个`gulpfile`文件中，可读性和可维护性都会变得很差。
 
 对`gulpfile`进行合理的拆分和组织，就可以增强`gulpfile`的可读性、可维护性和可扩展性。
@@ -116,7 +116,7 @@ gulp.task('watch:js', ['lint'], function() {
 {% endhighlight %}
 
 # 第三步：把基本任务定义为一个模块
-因为`gulpfile`本身就可以看作一个(?)node文件(?)，所以完全可以使用`CommonJS`模块系统把基本任务拆分成小的模块，不但易于阅读和维护，而且还便于重用。
+因为`gulpfile`本身就可以看作一个node文件，所以完全可以使用`CommonJS`模块系统把基本任务拆分成小的模块，不但易于阅读和维护，而且还便于重用。
 
 拆分后的`lint`任务：
 {% highlight javascript %}
