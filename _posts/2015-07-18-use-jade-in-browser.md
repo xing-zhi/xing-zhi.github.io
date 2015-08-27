@@ -17,19 +17,19 @@ Jade一般用于服务器端，是express默认的模板引擎，如果想在浏
 ## 编译
 编译过程把Jade文件转换成一个函数，函数名默认为「template」，接受一个对象作为参数。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 function template(locals) {
   // 函数体
 }
 {% endhighlight %}
 
 编译过程可以通过为命令行工具jade指定`-c`或者`--client`选项生成。
-{% highlight bash %}
+{% highlight bash linenos %}
 $ jade -c <jadefile-path> -o <output-path>
 {% endhighlight %}
 
 如果没有安装jade，使用npm全局安装即可。
-{% highlight bash %}
+{% highlight bash linenos %}
 $ npm i -g jade
 {% endhighlight %}
 
@@ -55,7 +55,7 @@ $ npm i -g jade
 
 ## gulpfile片段
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 'use strict';
 
 var gulp = require('gulp'),

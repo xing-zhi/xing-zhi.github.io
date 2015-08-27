@@ -10,7 +10,7 @@ npm模块有两种安装模式，本地安装和全局安装。两者的区别�
 
 全局安装在*nix系统之下需要权限
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ sudo npm i -g <npm-module>
 {% endhighlight %}
 
@@ -18,7 +18,7 @@ $ sudo npm i -g <npm-module>
 
 # 更改文件夹所有者
 解决权限问题最简单粗暴的方法就是修改安装路径的所有者。
-{% highlight bash %}
+{% highlight bash linenos %}
 $ sudo chown -R $USER /usr/local
 {% endhighlight %}
 
@@ -36,7 +36,7 @@ $ sudo chown -R $USER /usr/local
 
 ## 本地安装的npm模块可以通过指定路径执行
 第一个条件只要该npm模块被安装了就满足了。添加上路径，我们可以运行本地安装的npm模块
-{% highlight bash %}
+{% highlight bash linenos %}
 $ ./node_modules/.bin/<npm module>
 {% endhighlight %}
 
@@ -46,7 +46,7 @@ $ ./node_modules/.bin/<npm module>
 
 ## 设置「npm prefix」
 通过设置「npm prefix」可以指定全局安装的安装路径。
-{% highlight bash %}
+{% highlight bash linenos %}
 $ npm config set prefix ~/npm # ~/npm可以换成任意想要的路径
 {% endhighlight %}
 
@@ -54,7 +54,7 @@ $ npm config set prefix ~/npm # ~/npm可以换成任意想要的路径
 
 ## 把路径添加到`$PATH`中
 现在只需要把`~/npm/bin`添加到`$PATH`中就可以执行了，在`.bashrc`文件中添加如下行
-{% highlight bash %}
+{% highlight bash linenos %}
 export PATH="$HOME/npm/bin":$PATH
 {% endhighlight %}
 

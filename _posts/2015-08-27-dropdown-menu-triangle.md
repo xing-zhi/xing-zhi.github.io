@@ -26,7 +26,7 @@ categories: css
 # 通过`after`伪元素添加小三角
 要把小三角添加到下拉选项后面并不需要添加一个新的元素，利用`after`伪元素就可以了。
 
-{% highlight css %}
+{% highlight css linenos %}
 .dropdown {
     &:after {
         content: '';

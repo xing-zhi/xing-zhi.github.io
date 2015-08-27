@@ -18,12 +18,12 @@ categories: node
 `Node`结合`express`可以快速实现一个HTTP服务器。
 
 首先安装`express`
-{% highlight bash %}
+{% highlight bash linenos %}
 $ npm i -S express
 {% endhighlight %}
 
 然后是创建服务器server.js文件
-{% highlight javascript %}
+{% highlight javascript linenos %}
 var express = require('express'),
     app = express();
 
@@ -39,7 +39,7 @@ var express = require('express'),
 {% endhighlight %}
 
 最后，在和server.js处于相同目录下的public文件夹下添加相关文件，运行服务器
-{% highlight bash %}
+{% highlight bash linenos %}
 $ node server.js
 {% endhighlight %}
 
@@ -47,7 +47,7 @@ $ node server.js
 如果电脑上已经安装好了`Python`，那么使用`Python`则更简单。
 
 在某个文件夹中运行下面的命令，就可以把该文件夹变成一个HTTP服务器的根目录，同时在指定的端口上运行：
-{% highlight bash %}
+{% highlight bash linenos %}
 $ python -m SimpleHTTPServer 3000
 {% endhighlight %}
 

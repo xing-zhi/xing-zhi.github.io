@@ -13,7 +13,7 @@ categories: gulp
 # 需要改写的`gulpfile`
 以下面的`gulpfile`为例，对其进行拆分。因为只是为了示例，所有只定义了一个`gulp`任务。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 'use strict';
 
 var gulp = require('gulp'),
@@ -57,13 +57,13 @@ gulp.task('watch:js', ['lint'], function() {
 
 ##  安装插件
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ npm i -D gulp-load-plugins
 {% endhighlight %}
 
 ## 通过`gulp-load-plugins`加载gulp相关插件
 下面是使用`gulp-load-plugins`加载gulp相关插件后`gulpfile`
-{% highlight javascript %}
+{% highlight javascript linenos %}
 'use strict';
 
 var gulp = require('gulp'),
@@ -86,7 +86,7 @@ gulp.task('watch:js', ['lint'], function() {
 使用外部配置文件，可以方便地对配置进行管理、修改和重用。所有与gulp相关的配置都添加到`config.json`文件中。
 
 config.json文件
-{% highlight javascript %}
+{% highlight javascript linenos %}
 {
   "tasksPath": "gulp-tasks/",
   "source": {
@@ -96,7 +96,7 @@ config.json文件
 {% endhighlight %}
 
 gulpfile.js文件
-{% highlight javascript %}
+{% highlight javascript linenos %}
 'use strict';
 
 var gulp = require('gulp'),
@@ -119,7 +119,7 @@ gulp.task('watch:js', ['lint'], function() {
 因为`gulpfile`本身就可以看作一个node文件，所以完全可以使用`CommonJS`模块系统把基本任务拆分成小的模块，不但易于阅读和维护，而且还便于重用。
 
 拆分后的`lint`任务：
-{% highlight javascript %}
+{% highlight javascript linenos %}
 // gulp-tasks/lint.js
 'use strict';
 
@@ -140,7 +140,7 @@ module.exports = function(gulp, $, cfg) {
 
 但是因为加载每一个任务模块都是类似的，所有有必要把加载任务模块的操作抽象为一个函数。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 'use strict';
 
 var gulp = require('gulp'),

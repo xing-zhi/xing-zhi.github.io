@@ -23,7 +23,7 @@ categories: javascript es6
 + 箭头右边是函数体，当只有一条语句时，可以省略大括号，并且该语句对应的表达式的值被当作返回值在箭头函数被调用时返回。
 
 ## 示例
-{% highlight javascript %}
+{% highlight javascript linenos %}
 var foo = () => 'abc';    // 不接受参数，总是返回字符串'abc'
 
 var squar = x => x * x;    // 接受一个参数，返回参数的平方
@@ -60,7 +60,7 @@ var bar = (x, y) => {    // 接受两个参数，返回其中较大的值，实�
 
 所有，不使用箭头函数，我们是这样写代码的
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 function outer() {
   var that = this;
 
@@ -71,7 +71,7 @@ function outer() {
 {% endhighlight %}
 
 或者是这样写的
-{% highlight javascript %}
+{% highlight javascript linenos %}
 function outer() {
   var inner = function() {
     // this为outer函数的上下文
@@ -80,7 +80,7 @@ function outer() {
 {% endhighlight %}
 
 而使用箭头函数，我们可以这样写
-{% highlight javascript %}
+{% highlight javascript linenos %}
 function outer() {
   var inner = () => {
     // this为outer函数的上下文

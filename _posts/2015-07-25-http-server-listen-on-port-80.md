@@ -25,7 +25,7 @@ url中添加上端口号，就可以愉快地进行测试了。
 1. 以`root`权限运行server，监听80端口
 2. 修改程序的「uid」和「gid」
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 // server.js
 'use strict';
 
@@ -54,7 +54,7 @@ http.createServer(function(req, res) {
 
 现在使用`root`权限运行server
 
-{% highlight bash %}
+{% highlight bash linenos %}
 $ sudo node --harmony server.js
 
 # 输出
@@ -65,6 +65,6 @@ $ sudo node --harmony server.js
 现在在浏览器中不需要指明端口号就可以访问了。
 
 另外也可以使用`netstat`进行检测
-{% highlight bash %}
+{% highlight bash linenos %}
 $ sudo netstat -antp | grep 'node'
 {% endhighlight %}

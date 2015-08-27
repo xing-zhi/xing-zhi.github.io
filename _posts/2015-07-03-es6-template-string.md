@@ -16,7 +16,7 @@ categories: javascript es6
 
 如果有C语言的经验，`printf`函数就是字符串内插很好的例子。
 
-{% highlight c %}
+{% highlight c linenos %}
 int foo = 3;
 
 // %d为占位符，printf函数执行时，把%d用foo的实际值（3）替换，产生最终结果
@@ -26,7 +26,7 @@ pirntf('The value of foo is %d.', foo);
 
 在`ES6`的模板字符串中，使用美元符号和一对大括号包裹表达式（${expression}）来声明占位符。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 var foo = 3;
 
 console.log(`The value of foo is ${foo}.`);
@@ -34,7 +34,7 @@ console.log(`The value of foo is ${foo}.`);
 {% endhighlight %}
 
 使用普通字符串，我们需要使用字符串连接符（+），或者使用数组的join方法来实现.
-{% highlight javascript %}
+{% highlight javascript linenos %}
 var foo = 3;
 
 // 使用字符串连接符
@@ -51,7 +51,7 @@ console.log(['The value of foo is ', foo, '.'].join(''));
 # 多行字符串
 JavaScript中普通字符串是不允许换行的，跨行会引发解析错误。而要在一个字符串中使用换行需要使用转义字符（\n）。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 // 普通字符串
 var foo = 'line one\nline two';
 
@@ -72,7 +72,7 @@ console.log(foo === bar);    // =>true
 标签函数的第一个参数是由模板字符串中所有字符串字面值组成的数组，从第二个参数开始依次是模板字符串中占位符的值。
 
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 function tag(strings) {
 var values = Array.prototype.slice.call(arguments, 1),
     result = '';
@@ -107,7 +107,7 @@ value[1]:2
 由上面的输出可以看出：标签函数的第一个参数字符串数组是由模板字符串被占位符分割而成的。
 
 其实当不对模板字符串使用标签时，使用的是默认的标签：按顺序把字符串字面值和占位符的值连接起来。
-{% highlight javascript %}
+{% highlight javascript linenos %}
 function defaultTag(strings, ...values) {    // 这里使用了ES6的剩余参数特性
   return strings.reduce(function(result, string, index) {
     return `${result}${string}${values[index] ? values[index] : ''}`;

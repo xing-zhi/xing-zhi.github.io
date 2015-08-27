@@ -13,7 +13,7 @@ categories: javascript es6
 
 而之前的`var`声明的变量的作用域为函数作用域，即包含它们的最内层函数。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 function foo() {
   if ( true ) {
     let a = 'a';
@@ -34,7 +34,7 @@ function foo() {
 # const用于声明引用不可变的变量
 const声明的并不是常量，而是**声明的变量的引用不可被改变**，即**（同一作用域内）一旦声明，不可以被再次赋值，也不可以被再次声明**，所有**声明的时候必须进行初始化**。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 const foo = 'foo';
 
 // 即使是重新赋值为相同的值，也是不允许的
@@ -43,7 +43,7 @@ foo = 'foo';    // SyntaxError: Assignment to constant variable
 
 使用const进行声明而不进行初始化，会抛出异常并且终止程序。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 const foo;    // 抛出异常，终止程序
 {% endhighlight %}
 
@@ -56,7 +56,7 @@ const foo;    // 抛出异常，终止程序
 
 然后你会发现，大多数情况下，使用的是`const`。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 for ( let i = 0; i < 2; i++ ) {
   const double = i * 2;
 
@@ -74,7 +74,7 @@ for ( let i = 0; i < 2; i++ ) {
 
 同样的，对于块级作用域的变量而言，它们的生命周期为该变量被创建到块执行结束期间。即同一个块在每次执行时创建的块级变量相互之间是独立的。
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 const arr1 = [],
       arr2 = [];
 
@@ -99,7 +99,7 @@ setTimeout(function() {
 在上面的代码片段中，setTimeout()用于模拟异步。从结果可以看出，当使用let时，每次循环中的变量i是相互独立的。
 
 如果不使用let，则需要在每次循环中引入一个闭包
-{% highlight javascript %}
+{% highlight javascript linenos %}
 const arr = [];
 
 for ( var i = 0; i < 2; i++ ) {
@@ -117,7 +117,7 @@ setTimeout(function() {
 
 # 时间死区（TDZ：temporal dead zone）
 使用`var`声明的变量被提升到函数顶部，即使用`var`声明的变量的生命周期就是函数的生命周期。
-{% highlight javascript %}
+{% highlight javascript linenos %}
 (function() {
   console.log(foo);    // => undefined
 
@@ -130,7 +130,7 @@ setTimeout(function() {
 所以，在“var时代”，一个最佳实践就是在函数顶部声明所有需要的变量。
 
 使用`let`/`const`声明的变量则不一样，只有在该变量被声明后才可以被访问，这被称为“时间死区”（TDZ）。
-{% highlight javascript %}
+{% highlight javascript linenos %}
 (function() {
   console.log(foo);    // => ReferenceError: foo is not defined（抛出异常，程序终止）
   console.log(bar);    // => ReferenceError: bar is not defined（实际不会执行，用于演示）
@@ -144,7 +144,7 @@ setTimeout(function() {
 {% endhighlight %}
 
 需要特别指出的是：**时间死区是基于时间的，不是基于空间的**。
-{% highlight javascript %}
+{% highlight javascript linenos %}
 (function() {
   function foo() {
     console.log(bar);
@@ -160,7 +160,7 @@ setTimeout(function() {
 
 # 相同作用域内，不能重复声明同一个变量
 在同一个作用域内，使用`var`重复声明一个变量，实际效果是什么也不做；但是使用`let`重复声明一个变量时会抛出异常。
-{% highlight javascript %}
+{% highlight javascript linenos %}
 (function() {
   let foo = 'foo';
 
@@ -171,7 +171,7 @@ setTimeout(function() {
 什么？你问`const`呢？`const`声明的变量连再次赋值都不被允许，重复声明当然也是不被允许的呀。
 
 因为函数的行参相当于这个函数中的局部变量，所以在一个函数的顶级作用域中不能声明和行参同名的变量。
-{% highlight javascript %}
+{% highlight javascript linenos %}
 (function(foo) {
   let foo = 'foo';    // SyntaxError: Identifier 'foo' has already been declared
 })();
