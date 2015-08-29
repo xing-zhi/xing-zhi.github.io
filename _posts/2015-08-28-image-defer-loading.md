@@ -30,7 +30,7 @@ categories: performance
 这一部分和[图片懒加载](./image-lazy-loading.html)相同，就不再重复，具体可以参考[图片懒加载](./image-lazy-loading.html)。
 
 ## 延迟加载图片
-`window.onload`事件在页面加载的最后触发，此时页面中所有的需要被加载的内容都已经被加载了，对于该网页而言，就可以认为网络已经空闲了，可以加载被延迟加载的图片了。
+`window`上的`load`事件在页面加载的最后触发，此时页面中所有的需要被加载的内容都已经被加载了，对于该网页而言，就可以认为网络已经空闲了，可以加载被延迟加载的图片了。
 
 {% highlight javascript linenos %}
 function deferLoad() {
@@ -44,7 +44,7 @@ function deferLoad() {
   });
 }
 
-window.onload = deferLoad;
+window.addEventListener('load', deferLoad);
 {% endhighlight %}
 
 # 完整示例
