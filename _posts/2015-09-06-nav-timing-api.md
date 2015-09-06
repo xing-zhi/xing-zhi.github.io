@@ -16,7 +16,7 @@ Navigation Timing API就提供了获取一个网站的生命周期不同关键�
 
 这个api的使用也非常简单，上图中所有数据（时间戳）都存储在全局变量`performance`的`timing`属性中，一个简单的属性查询就的得到了想要的数据。
 
-下面我们利用这个api来计算DNS查询时延和建立连接的时延。
+下面我们利用这个api来计算从浏览器发出请求到收到响应的时延。
 
 <p data-height="266" data-theme-id="18224" data-slug-hash="VvYNvm" data-default-tab="result" data-user="xingzhi" class='codepen'>See the Pen <a href='http://codepen.io/xingzhi/pen/VvYNvm/'>nav-timing api</a> by xingzhi (<a href='http://codepen.io/xingzhi'>@xingzhi</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
