@@ -3,7 +3,7 @@ layout: post
 title:  "「Nginx」的安装和开机自动启动设置"
 date:   2015-09-21 11:13:00
 comments: true
-categories: css
+categories: nginx
 ---
 
 本文主要记录在Debian8上编译安装最新版本的Nginx和设置其在开机时自动启动。
