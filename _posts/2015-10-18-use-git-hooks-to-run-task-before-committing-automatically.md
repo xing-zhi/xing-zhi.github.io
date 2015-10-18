@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "使用「git hooks」设置在代码提交前自动运行任务"
+title:  "使用「git hooks」、「precommit-hook」和「gulp」在代码提交前自动运行任务"
 date:   2015-10-18 10:50:00
 comments: true
 categories: git
