@@ -7,9 +7,7 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
-    background: url('../images/hero-image.jpg') 0 no-repeat ;
-    background-size: 100% 100%;
-    height: 300px;
+    background-color:  $brand-color;
 }
 
 .site-title {
@@ -27,46 +25,18 @@
 
 .site-nav {
     float: right;
+    line-height: 56px;
     ul {
         list-style: none;
-        margin: 10px 0;
         padding: 0;
-        background-color: #eee;
+        margin-bottom: 0;
         li {
-            display: inline-block;
-            padding: 0 15px;
-            border-left: 1px solid #ddd;
-            cursor: pointer;
-            &:first-child {
-                border: none;
-                border-radius: 5px 0 0 5px;
-            }
-        }
-        .dropdown {
-            position: relative;
-            .drop-nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                margin: 0px;
-                background-color: #ddd;
-                li {
-                    display: block;
-                    width: 157px;
-                    a {
-                        display: block;
-                    }
-                }
-            }
-            &:hover > .drop-nav {
-                display: block;
+            a {
+                color: #424242;
             }
         }
     }
 }
-
-
 
 /**
  * Site footer
