@@ -25,6 +25,7 @@ categories: html5
 + `add`和`remove`方法可以同时接受多个参数，同时处理多个类名。
 + `contains`方法只接受一个参数，多余参数会被忽略。
 + `toggle`接收一个参数和一个可选的布尔值参数（`force`），当指定`force`为`true`时，作用和`add`相同；当指定`force`为`false`时，作用和`remove`相同。
++ 所有方法都无法链式调用。
 
 # 兼容性
 `classList`属性的兼容性如下图。
