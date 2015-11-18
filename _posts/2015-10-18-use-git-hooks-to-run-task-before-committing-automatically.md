@@ -73,7 +73,7 @@ $ npm i -D precommit-hook
 
 + 安装gulp和相应的插件
 {% highlight bash linenos %}
-$ npm i -D gulp gulp-jshint gulp-jscs gulp-jshint-stylish gulp-jscs-stylish
+$ npm i -D gulp gulp-jshint gulp-jscs jshint-stylish gulp-jscs-stylish
 {% endhighlight %}
 
 + 添加gulp任务
