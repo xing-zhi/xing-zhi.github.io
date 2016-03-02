@@ -3,7 +3,7 @@ layout: post
 title:  "让file类型的input每次选择文件时都触发「change」事件"
 date:   2016-03-02 20:25:00
 comments: true
-categories: node
+categories: front-end
 ---
 
 使用`type`为`file`的`input`可以方便地实现文件上传功能。
