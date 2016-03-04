@@ -18,7 +18,7 @@ categories: front-end
 
 要想保证类型为`file`的`input`在每次选择文件后都触发`change`事件只需要在执行完需要的逻辑后把它的`value`属性设置为某个值，比如空字符串就可以了。
 
-{% highlight js linenos %}
+{% highlight javascript linenos %}
 const fileInput = document.querySelector('input[type="file"]');
 
 fileInput.addEventListener('change', function() {
