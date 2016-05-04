@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "在JavaScript自定义事件和触发事件"
-date:   2016-03-24 19:10:00
+title: "在JavaScript自定义事件和触发事件"
+date: 2016-03-24 19:10:00
 comments: true
 categories: javascript
 ---
@@ -62,20 +62,20 @@ el.dispatchEvent(event);
 {% endhighlight %}
 
 # Node中自定义事件和触发事件
-Node提供了[events模块](https://nodejs.org/api/events.html)用于自定义事件和触发事件，我们可以通过继承`events`模块提供的`EventEmitter`类来实现具有创建和监听自定义事件的类，进而可以通过事件事件不同代码间解耦等。
+Node提供了[events模块](https://nodejs.org/api/events.html)用于自定义事件和触发事件，我们可以通过继承`events`模块提供的`EventEmitter`类来实现具有创建和监听自定义事件的类，进而可以通过事件实现不同代码间解耦等。
 
 {% highlight javascript linenos %}
 'use strict';
 
 const EventEmitter = require('events');
 
-const eventInstanse = new EventEmitter();
+const eventInstance = new EventEmitter();
 
-eventInstanse.on('testEvent', function(data) {
+eventInstance.on('testEvent', function(data) {
   console.log(data);
 });
 
-eventInstanse.emit('testEvent', 'test');    // => test
+eventInstance.emit('testEvent', 'test');    // => test
 {% endhighlight %}
 
 更多内容请参考[官方文档](https://nodejs.org/api/events.html)。
