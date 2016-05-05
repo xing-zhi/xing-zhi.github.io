@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "vuex和表单"
-date:   2016-05-05 10:30:00
+date:   2016-05-05 20:30:00
 comments: true
 categories: vue
 ---
