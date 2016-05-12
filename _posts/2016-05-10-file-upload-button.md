@@ -14,7 +14,7 @@ categories: front-end
 
 # 把透明的文件上传控件覆盖在按钮上方
 
-当点击文件上传控件时就弹出文件选择对话框，一个实现的思路就是把文件上传控件设置为透明，同时覆盖在按钮上方。
+当点击文件上传控件时就弹出文件选择对话框，一种实现的思路就是把文件上传控件设置为透明，同时覆盖在按钮上方。
 
 {% highlight html linenos %}
 <button id="file-uploader">
@@ -46,7 +46,7 @@ categories: front-end
 {% highlight html linenos %}
 <button id="file-upload-btn">上传文件</button>
 <input type="file" id="hide-file-input" style="display: none"/>
-{% endhighlight }%
+{% endhighlight %}
 
 {% highlight javascript linenos %}
 const hideFileInput = document.querySelector('#hide--file-input');
