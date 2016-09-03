@@ -5,6 +5,8 @@ date: 2016-05-10 20:30:00
 comments: true
 categories: front-end
 ---
+    更新
+    2016年9月3日：修复点击按钮附近也会触发文件选择器
 
 使用类型为`file`的`input`元素（后面简称为「文件上传控件」）可以轻松地实现文件上传，但是默认的文件上传控件样式比较丑，同时选择的文件被显示出来。
 
@@ -19,13 +21,14 @@ categories: front-end
 {% highlight html linenos %}
 <button id="file-uploader">
   上传文件
-  <input type="file" id/>
+  <input type="file" />
 </button>
 {% endhighlight %}
 
 {% highlight css linenos %}
 #file-uploader {
     position: relative;
+    overflow: hidden;
 }
 #file-uploader input {
     opacity: 0;
