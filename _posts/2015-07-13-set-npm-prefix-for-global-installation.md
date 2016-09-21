@@ -3,7 +3,7 @@ layout: post
 title: 设置「npm prefix」进行全局安装
 date:   2015-07-13 09:30:00
 comments: true
-categories: node npm
+categories: npm
 ---
 
 npm模块有两种安装模式，本地安装和全局安装。两者的区别在于：本地安装用于当前项目，全局安装用于命令行工具。
