@@ -4,7 +4,6 @@ body {
 
 pre {
     overflow: auto;
-    border-left-width: 5px;
 }
 
 h1 {
@@ -19,5 +18,22 @@ h2, .post-content h2 {
     h1, h2 {
         margin-top: 24px;
         color: darken($text-color, 20%);
+    }
+}
+
+figure.highlight {
+    background-color: #2d2d2d;
+    color: #ccc;
+}
+
+pre.lineno {
+    color: #666;
+}
+
+div.highlighter-rouge {
+    background-color: #2d2d2d;
+    color: #ccc;
+    .highlight {
+        background-color: transparent;
     }
 }
