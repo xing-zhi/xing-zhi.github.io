@@ -17,3 +17,6 @@ ElementUI表单的校验功能还是蛮好用的，不过今天遇到了一个�
 通过这种方式i实现了想要的效果。
 
 Show me the code。
+
+<p data-height="300" data-theme-id="18224" data-slug-hash="vZbpPK" data-default-tab="result" data-user="xingzhi" data-embed-version="2" data-pen-title="validate-dynamic-form-in-element-ui" class="codepen">See the Pen <a href="https://codepen.io/xingzhi/pen/vZbpPK/">validate-dynamic-form-in-element-ui</a> by xingzhi (<a href="https://codepen.io/xingzhi">@xingzhi</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
