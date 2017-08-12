@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "在ElementUI中对动态表单进行校验"
-date:   2017-07-12 19:50:00
+date:   2017-07-13 19:50:00
 comments: true
 tags:
     - ElementUI
