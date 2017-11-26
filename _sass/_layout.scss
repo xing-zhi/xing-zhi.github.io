@@ -42,12 +42,8 @@
  * Site footer
  */
 .site-footer {
-    padding: $spacing-unit 0;
-}
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+    padding-bottom: $spacing-unit;
+    margin-top: $spacing-unit;
 }
 
 .social-media-list {
@@ -65,7 +61,8 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
 }
 
 .page-heading {
@@ -135,7 +132,7 @@
     color: #404040;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 21px;
     }
 }
 
@@ -147,26 +144,18 @@
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 20px;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 18;
         }
     }
 
     h3 {
-        font-size: 26px;
+        font-size: 18;
 
         @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
+            font-size: 18;
         }
     }
 }
