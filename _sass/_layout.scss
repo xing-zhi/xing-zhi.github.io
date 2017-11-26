@@ -127,7 +127,7 @@
         margin-bottom: $spacing-unit;
         background-color: #f8f8f8;
         border-radius: 5px;
-        padding: 10px;
+        padding: 15px 10px;
         box-shadow: 1px 1px 2px #777;
         transition: box-shadow 0.3s;
         &:hover {
@@ -138,12 +138,25 @@
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    color: #ccc;
 }
 
 .post-link {
     display: block;
-    font-size: 24px;
+    &:hover {
+        text-decoration: none;
+    }
+    .post-title:hover {
+        color: #0085a1;
+    }
+    .post-content-preview {
+        font-size: 14px;
+        color: #a3a3a3;
+        margin-bottom: 10px;
+        &:hover {
+            color: #0085a1;
+        }
+    }
 }
 
 
@@ -167,6 +180,7 @@
     font-size: 24px;
     letter-spacing: -1px;
     line-height: 1;
+    color: #404040;
 
     @include media-query($on-laptop) {
         font-size: 36px;

@@ -53,14 +53,15 @@ div.highlighter-rouge {
         position: relative;
         a {
             display: block;
-            border: 1px solid #1756a9;
+            color: #0085a1;
+            border: 1px solid #0085a1;
             border-radius: 3px;
             padding: 5px 10px;
             text-decoration: none;
             transition: all .2s;
             &:hover {
                 color: #fff;
-                background-color: #1756a9;
+                background-color: #0085a1;
             }
         }
         &.previous {
