@@ -1,5 +1,5 @@
 {% if paginator.total_pages > 1 %}
-<ul class="pager">
+<ul class="pager clearfix">
   {% if paginator.previous_page %}
   <li class="previous">
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
