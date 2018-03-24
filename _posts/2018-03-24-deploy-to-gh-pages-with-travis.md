@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用travis自动部署到gh-pages分支"
-date:   2018-03-20 15:00:00
+date:   2018-03-24 17:00:00
 comments: true
 tags:
     - github
